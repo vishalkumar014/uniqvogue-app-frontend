@@ -10,14 +10,19 @@ CustomTheme = createTheme({
             color:"#000"
         },
         logo:{
-            color:"#000",
             fontSize:"20px",
             textAlign:"center",
-            cursor:"pointer"
+            cursor:"pointer",
+            color: "#fc2779",
+            fontWeight: 700,
         },
         headerMenu:{
             justifyContent:"end",
             cursor:"pointer"
+        },
+        icon:{
+            fontSize: '14px',
+            fontWeight: 600,
         }
     },
 

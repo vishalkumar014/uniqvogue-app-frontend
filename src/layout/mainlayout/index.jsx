@@ -9,7 +9,7 @@ export default function MainLayout() {
     <Box>
         <Header/>
         <Container className="main" maxWidth={false} component="div">
-            <Outlet/>
+          <Outlet/>
         </Container>
         <Footer/>
     </Box>

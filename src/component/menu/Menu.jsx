@@ -13,7 +13,12 @@ const headerMenu = [
         id:1,
         name:"Men",
         to:"/men"
-    }
+    },
+    {
+        id:3,
+        name:"New",
+        to:"/new"
+    },
 ] 
 
 export default function Menu() {
@@ -25,7 +30,7 @@ export default function Menu() {
                 {
                     headerMenu.map((menu,index)=>{
                         return(
-                            <Grid key={index} size={4}>
+                            <Grid key={index} size={3}>
                                 <Typography component={"span"}>
                                     {menu.name}
                                 </Typography>
