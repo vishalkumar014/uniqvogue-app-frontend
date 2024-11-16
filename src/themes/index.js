@@ -25,6 +25,15 @@ CustomTheme = createTheme({
             fontWeight: 600,
         }
     },
+    singleProductDiv:{
+        wishList:{
+            position:'absolute',
+            zIndex:'9',
+            padding:'10px',
+            right:'0px',
+            cursor:"pointer",
+        }
+    }
 
 });
 

@@ -1,9 +1,13 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
 import Slider from "react-slick";
+import { MdFavoriteBorder } from 'react-icons/md';
+import { useTheme } from '@mui/material/styles';
 
 export default function ProductSingleDiv() {
+  const themes    = useTheme();
+  const {singleProductDiv}  = themes
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -69,7 +73,10 @@ export default function ProductSingleDiv() {
   return (
     <Box>
       <Grid container>
-        <Grid size={12}>
+        <Grid size={12} position={"relative"}>
+            <Box sx={singleProductDiv.wishList}>
+              <MdFavoriteBorder style={{fontSize:'24px', color:"grey"}} />
+            </Box>
             <Slider {...settings}>
               <Box className="sliderr">
                   <img width={"100%"} src="https://images.bestsellerclothing.in/data/only/01-nov-2024/130542001_g5.jpg?width=380&height=500&mode=fill&fill=blur&format=auto"/>
@@ -86,7 +93,11 @@ export default function ProductSingleDiv() {
             </Slider>
         </Grid>
         <Grid size={12}>
-
+          <Box>
+              <Typography>
+                adv fashionwear Women Bodycon Maroon Dress
+              </Typography>
+          </Box>
         </Grid>
         <Grid size={12}>
 
