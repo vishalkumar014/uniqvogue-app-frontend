@@ -8,18 +8,16 @@ export default function Products() {
   return (
     <Box>
       <Grid container spacing={2}>
-        <Grid size={3} >
-          <ProductSingleDiv/>
-        </Grid>
-        <Grid size={3}>
-          <ProductSingleDiv/>
-        </Grid>
-        <Grid size={3}>
-          <ProductSingleDiv/>
-        </Grid>
-        <Grid size={3}>
-          <ProductSingleDiv/>
-        </Grid>
+        {
+          [1,2,3,4].map((product,index)=>{
+            return(
+              <Grid key={index} size={3} >
+                <ProductSingleDiv/>
+              </Grid>
+            )
+          })
+        }
+        
       </Grid>
     </Box>
   )

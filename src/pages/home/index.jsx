@@ -1,14 +1,20 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
 import TopBanner from './TopBanner'
 import HomeSlider from '../../component/slider/HomeSlider';
 import SideBar from '../product/SideBar';
 import Products from '../product/Products';
+import { useTheme } from '@mui/material/styles';
+import MiddleBanner from './MiddleBanner';
+import NewArrivalsBanner from './NewArrivalsBanner'
 
 export default function index() {
+  const themes    = useTheme();
+  const {productSideBar}  = themes
+
   return (
     <Box>
       <Grid container justifyContent={"center"}>
@@ -19,14 +25,13 @@ export default function index() {
           <HomeSlider/>
         </Grid>
         <Grid size={12}>
-          <Grid container>
-            <Grid size={2.2}>
-              <SideBar/>
-            </Grid>
-            <Grid size={9.8}>
-              <Products/>
-            </Grid>
-          </Grid>
+          <NewArrivalsBanner/>
+        </Grid>
+        <Grid size={11.8}>
+          <Products/>
+        </Grid>
+        <Grid size={12}>
+          <MiddleBanner/>
         </Grid>
       </Grid>
     </Box>

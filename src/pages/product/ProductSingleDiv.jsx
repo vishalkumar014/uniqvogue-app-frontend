@@ -4,6 +4,8 @@ import Grid from '@mui/material/Grid2';
 import Slider from "react-slick";
 import { MdFavoriteBorder } from 'react-icons/md';
 import { useTheme } from '@mui/material/styles';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import PercentIcon from '@mui/icons-material/Percent';
 
 export default function ProductSingleDiv() {
   const themes    = useTheme();
@@ -94,13 +96,46 @@ export default function ProductSingleDiv() {
         </Grid>
         <Grid size={12}>
           <Box>
-              <Typography>
-                adv fashionwear Women Bodycon Maroon Dress
-              </Typography>
+            <Typography sx={singleProductDiv.title}>
+              adv fashionwear Women Bodycon Maroon Dress
+            </Typography>
           </Box>
         </Grid>
         <Grid size={12}>
-
+          <Grid container className="price_container">
+            <Grid size={3}>
+              <Box display={"flex"} alignItems={"center"}>
+                <CurrencyRupeeIcon sx={singleProductDiv.rupeesIcon}/> 
+                <Typography sx={singleProductDiv.price}>500</Typography>
+              </Box>
+            </Grid>
+            <Grid size={3}>
+              <Box display={"flex"} alignItems={"center"}>
+                <CurrencyRupeeIcon sx={singleProductDiv.rupeesStrikeIcon}/> 
+                <Typography sx={singleProductDiv.strikePrice}><s>800</s></Typography>
+              </Box>
+            </Grid>
+            <Grid size={2}>
+              <Box display={"flex"} alignItems={"center"}> 
+                <Typography sx={singleProductDiv.offPer}>10</Typography>
+                <PercentIcon sx={singleProductDiv.rupeesIcon}/>
+                <Typography sx={singleProductDiv.offPer} ml={0.3}>OFF</Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid size={12}>
+          <Grid container textAlign={"center"} className="size_container">
+            {
+              ['XS','S','M'].map((size,index)=>{
+                return(
+                  <Grid key={index} size={.6}>
+                    <Typography sx={singleProductDiv.size}>{size}</Typography>
+                  </Grid>
+                )
+              })
+            }
+          </Grid>
         </Grid>
       </Grid>
     </Box>
