@@ -99,8 +99,34 @@ CustomTheme = createTheme({
             justifyContent:"center"
         }
 
+    },
+    singleProductPage:{
+       mainBox:{
+        backgroundColor:"#f1f3f6",
+        paddingBottom:"20px",
+       },
+       containerBg:{
+        backgroundColor:"#fff",
+        padding:"10px 0px",
+        paddingTop:"50px",
+       },
+       thumbnail:{
+        border:'2px solid #fc2779',
+       },
+       brandTopTitle:{
+        color: '#878787',
+        fontSize:'16px',
+        fontWeight: 500,
+        textTransform:'uppercase',
+       },
+       productTitle:{
+        fontSize:'18px',
+       },
+       specialPrice:{
+        color:"#26a541",
+        fontSize:'14px',
+       }
     }
-
 });
 
 export default CustomTheme;
