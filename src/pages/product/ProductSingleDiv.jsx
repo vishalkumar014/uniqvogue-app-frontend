@@ -6,10 +6,12 @@ import { MdFavoriteBorder } from 'react-icons/md';
 import { useTheme } from '@mui/material/styles';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import PercentIcon from '@mui/icons-material/Percent';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductSingleDiv() {
   const themes    = useTheme();
   const {singleProductDiv}  = themes
+  const navigate = useNavigate()
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -33,47 +35,51 @@ export default function ProductSingleDiv() {
     );
   }
 
-    var settings = {
-        dots: false,
-        infinite: true,
-        autoplay: true,
-        speed: 2000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        cssEase: "linear",
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
+  var settings = {
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 2000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
           }
-        ]
-    };
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+  };
+
+  const moveToSinglePage = () => {
+    navigate('/product/fsgfdgdfg')
+  }
 
   return (
-    <Box>
+    <Box onClick={()=>moveToSinglePage()}>
       <Grid container>
         <Grid size={12} position={"relative"}>
             <Box sx={singleProductDiv.wishList}>
