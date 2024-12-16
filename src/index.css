@@ -6,3 +6,7 @@ body {
   padding: 0;
   color:#000;
 }
+.unqRating .MuiChip-deleteIcon {
+  color: rgb(255 255 255) !important;
+  font-size: 18px !important;
+}

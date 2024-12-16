@@ -101,31 +101,85 @@ CustomTheme = createTheme({
 
     },
     singleProductPage:{
-       mainBox:{
-        backgroundColor:"#f1f3f6",
-        paddingBottom:"20px",
-       },
-       containerBg:{
-        backgroundColor:"#fff",
-        padding:"10px 0px",
-        paddingTop:"50px",
-       },
-       thumbnail:{
-        border:'2px solid #fc2779',
-       },
-       brandTopTitle:{
-        color: '#878787',
-        fontSize:'16px',
-        fontWeight: 500,
-        textTransform:'uppercase',
-       },
-       productTitle:{
-        fontSize:'18px',
-       },
-       specialPrice:{
-        color:"#26a541",
-        fontSize:'14px',
-       }
+        mainBox:{
+            backgroundColor:"#f1f3f6",
+            paddingBottom:"20px",
+        },
+        containerBg:{
+            backgroundColor:"#fff",
+            padding:"10px 0px",
+            paddingTop:"50px",
+        },
+        thumbnail:{
+            border:'2px solid #fc2779',
+        },
+        brandTopTitle:{
+            color: '#878787',
+            fontSize:'16px',
+            fontWeight: 500,
+            textTransform:'uppercase',
+        },
+        productTitle:{
+            fontSize:'18px',
+        },
+        specialPrice:{
+            color:"#26a541",
+            fontSize:'14px',
+        },
+        priceSaleText:{
+            fontSize:"25px",
+            fontWeight:600
+        },
+        priceMrpText:{
+            fontSize:"17px",
+            textDecoration:"line-through",
+            color:"#878787"
+        },
+        priceDiscount:{
+            fontSize:"17px",
+            color:"#388e3c"
+        },
+        overAllRating:{
+            backgroundColor:"#26a541",
+            fontWeight: 600,
+        },
+        overAllRatingText:{
+            color:"#878787",
+        },
+        sizeVaration:{
+            color:"#878787",
+            fontSize:'15px',
+        },
+        sizeVarationGrid:{
+            textAlign:"center"
+        },
+        sizeVarationText:{
+            border: '2px solid #f0f0f0',
+            padding: '6px',
+            textTransform:'uppercase'
+        },
+        sizeChartText:{
+            color:"#2874f0"
+        },
+        buyNowBtn:{
+            textTransform:'uppercase',
+            backgroundColor:'#fb641b',
+            padding: '13px',
+            fontWeight: 600,
+            fontSize: '15px',
+        },
+        offerBadge:{
+            color:"#fb641b"
+        },
+        productDetailsTitle:{
+            fontSize:"25px",
+            fontWeight:600,
+            boxShadow:"unset",
+            padding:"0px"
+        },
+        productDetailsLable:{
+            color:"#878787",
+        }
     }
 });
 

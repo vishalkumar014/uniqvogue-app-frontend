@@ -3,7 +3,7 @@ import MainLayout from '../layout/mainlayout';
 import Loadable from '../component/Loadable';
 
 const Home = Loadable(lazy(() => import('../pages/home')));
-const SingleProductPage = Loadable(lazy(() => import('../pages/single/SingleProductPage')));
+const SingleProductPage = Loadable(lazy(() => import('../pages/product/single/SingleProductPage')));
 
 const NotFound =()=>{
   return(

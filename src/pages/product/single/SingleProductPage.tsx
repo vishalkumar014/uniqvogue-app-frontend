@@ -2,17 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { Container,Box, Typography} from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
-import productData_ from '../../productJson';
+import productData_ from '../../../productJson';
+import Price from './Price';
+import RatingOverView from './RatingOverView';
+import Varations from './Varations';
+import BuyNow from './BuyNow';
+import AvailableOffers from './AvailableOffers';
+import ProductDetails from './ProductDetails';
 
 export default function SingleProductPage() {
-    const themes    = useTheme();
+    const themes:any    = useTheme();
     const {singleProductPage}  = themes
     const [productData,setProductData] = useState<any>(false)
     const [mainImage,setMainImage] = useState<any>('')
     const [selectedImage,setSelectedImage] = useState<any>(0)
 
     useEffect(()=>{
-        console.log(productData_.images[0],'productData_');
         setProductData(productData_)
         setMainImage(productData_.images[0])
     },[])
@@ -27,7 +32,7 @@ export default function SingleProductPage() {
             {
                 productData &&
                 <Box sx={singleProductPage.mainBox}>
-                    <Container maxWidth={'lg'} sx={singleProductPage.containerBg}>
+                    <Container maxWidth={'lg'}  sx={singleProductPage.containerBg}>
                         <Grid container>
                             <Grid size={6}>
                                 <Box>
@@ -54,6 +59,9 @@ export default function SingleProductPage() {
                                         </Grid>
                                     </Grid>
                                 </Box>
+                                <Box>
+                                    <BuyNow/>
+                                </Box>
                             </Grid>
                             <Grid size={6}>
                                 <Box>
@@ -64,6 +72,21 @@ export default function SingleProductPage() {
                                         <Grid size={12}>
                                             <Typography sx={singleProductPage.productTitle}>{productData.title}</Typography>
                                             <Typography sx={singleProductPage.specialPrice}>Special price</Typography>
+                                        </Grid>
+                                        <Grid size={12}>
+                                           <Price/>     
+                                        </Grid>
+                                        <Grid size={12}>
+                                           <RatingOverView/>     
+                                        </Grid>
+                                        <Grid size={12} mt={1}>
+                                            <Varations/>
+                                        </Grid>
+                                        <Grid size={12} mt={1}>
+                                            <AvailableOffers/>
+                                        </Grid>
+                                        <Grid size={12} mt={1}>
+                                            <ProductDetails/>
                                         </Grid>
                                     </Grid>
                                 </Box>
