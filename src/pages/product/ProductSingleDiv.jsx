@@ -85,20 +85,9 @@ export default function ProductSingleDiv() {
             <Box sx={singleProductDiv.wishList}>
               <MdFavoriteBorder style={{fontSize:'24px', color:"grey"}} />
             </Box>
-            <Slider {...settings}>
-              <Box className="sliderr">
-                  <img width={"100%"} src="https://images.bestsellerclothing.in/data/only/01-nov-2024/130542001_g5.jpg?width=380&height=500&mode=fill&fill=blur&format=auto"/>
-              </Box>
-              <Box className="sliderr">
-                  <img width={"100%"} src="https://images.bestsellerclothing.in/data/only/01-nov-2024/130542001_g5.jpg?width=380&height=500&mode=fill&fill=blur&format=auto"/>
-              </Box>
-              <Box className="sliderr">
-                  <img  width={"100%"}src="https://images.bestsellerclothing.in/data/only/01-nov-2024/130542001_g5.jpg?width=380&height=500&mode=fill&fill=blur&format=auto"/>
-              </Box>
-              <Box>
-                  <img  width={"100%"} src="https://images.bestsellerclothing.in/data/only/01-nov-2024/130542001_g5.jpg?width=380&height=500&mode=fill&fill=blur&format=auto"/>
-              </Box>
-            </Slider>
+            <Box className="sliderr">
+              <img width={"100%"} src="https://images.bestsellerclothing.in/data/only/01-nov-2024/130542001_g5.jpg?width=380&height=500&mode=fill&fill=blur&format=auto"/>
+            </Box>
         </Grid>
         <Grid size={12}>
           <Box>

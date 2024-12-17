@@ -5,7 +5,6 @@ import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
 import TopBanner from './TopBanner'
 import HomeSlider from '../../component/slider/HomeSlider';
-import SideBar from '../product/SideBar';
 import Products from '../product/Products';
 import { useTheme } from '@mui/material/styles';
 import MiddleBanner from './MiddleBanner';

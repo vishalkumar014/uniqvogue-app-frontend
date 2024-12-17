@@ -4,6 +4,7 @@ import Loadable from '../component/Loadable';
 
 const Home = Loadable(lazy(() => import('../pages/home')));
 const SingleProductPage = Loadable(lazy(() => import('../pages/product/single/SingleProductPage')));
+const CategoryPage = Loadable(lazy(() => import('../pages/category/Category')));
 
 const NotFound =()=>{
   return(
@@ -19,6 +20,10 @@ const MainRoutes = {
     {
       path: '/',
       element: <Home/>
+    },
+    {
+      path: 'product/cid/:slug',
+      element: <CategoryPage/>
     },
     {
       path: 'product/:slug',
