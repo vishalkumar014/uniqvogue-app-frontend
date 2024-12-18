@@ -5,8 +5,13 @@ body {
   margin: 0;
   padding: 0;
   color:#000;
+  background-color: #f1f3f6 !important;
 }
 .unqRating .MuiChip-deleteIcon {
   color: rgb(255 255 255) !important;
   font-size: 18px !important;
+}
+.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
+.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #fc2779 !important;
 }

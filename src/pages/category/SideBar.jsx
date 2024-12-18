@@ -6,16 +6,13 @@ import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { useTheme } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 
 export default function SideBar() {
-  const [open, setOpen] = React.useState(false);
-  const themes    = useTheme();
-  const {productSideBar}  = themes
-
+  const [open, setOpen] = React.useState(true);
+  
   const handleClick = () => {
-    setOpen(!open);
+    setOpen(true);
   };
 
   return (

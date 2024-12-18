@@ -63,6 +63,11 @@ CustomTheme = createTheme({
             fontSize: '11px',
             fontWeight: '600',
             color: 'grey',
+        },
+        firstBox:{
+            padding:'10px',
+            backgroundColor:'#fff',
+            cursor:"pointer"
         }
     },
     productSideBar:{
@@ -179,6 +184,51 @@ CustomTheme = createTheme({
         },
         productDetailsLable:{
             color:"#878787",
+        },
+    },
+    checkOutPage:{
+        checkoutBox:{
+            marginTop:"50px",
+            marginBottom:"50px"
+        },
+        checkOutPaperBox:{
+            padding:"20px"
+        },
+        checkOutStepLable:{
+            fontSize:"25px !important"
+        },
+        checkOutPageStepContentContainerGridSecond:{
+            textAlign:"right"
+        },
+        listBtn:{
+            border:"1px solid #fc2779"
+        },
+        continueBtn:{
+            backgroundColor:"#fc2779",
+            mt: 1, 
+            mr: 1
+        },
+        orderSummryTypography:{
+            padding:"15px 20px",
+            color:"#878787",
+            textTransform:'uppercase'
+        },
+        orderSummryContainerGridOne:{
+            borderBottom:"1px solid #f0f0f0"
+        },
+        orderSummryContainerGridSecond:{
+            padding:"15px 20px",
+        },
+        orderSummryPaybalGrid:{
+            borderTop:'1px dashed #e0e0e0',
+            padding:"20px 0px"
+        },
+        orderSummryPaybalText:{
+            fontSize:'18px',
+            fontWeight: 600,
+        },
+        orderSummryContainerGridSeCondcontainerGrid:{
+            textAlign:"right"
         }
     }
 });

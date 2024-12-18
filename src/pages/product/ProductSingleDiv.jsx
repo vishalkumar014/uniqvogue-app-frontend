@@ -79,7 +79,7 @@ export default function ProductSingleDiv() {
   }
 
   return (
-    <Box onClick={()=>moveToSinglePage()}>
+    <Box sx={singleProductDiv.firstBox} onClick={()=>moveToSinglePage()}>
       <Grid container>
         <Grid size={12} position={"relative"}>
             <Box sx={singleProductDiv.wishList}>

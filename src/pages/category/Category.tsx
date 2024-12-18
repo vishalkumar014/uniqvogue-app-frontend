@@ -18,6 +18,9 @@ export default function Category() {
                 <Box mb={1}>
                     <Products/>
                 </Box>
+                <Box mb={1}>
+                    <Products/>
+                </Box>
             </Grid>
         </Grid>
     )

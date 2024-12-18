@@ -20,16 +20,16 @@ export default function index() {
         <Grid size={12}>
           <TopBanner/>
         </Grid>
-        <Grid size={11.8}>
+        <Grid size={11.9}>
           <HomeSlider/>
         </Grid>
-        <Grid size={12}>
+        <Grid size={12} mt={2}>
           <NewArrivalsBanner/>
         </Grid>
-        <Grid size={11.8}>
+        <Grid size={11.8} mt={2}>
           <Products/>
         </Grid>
-        <Grid size={12}>
+        <Grid size={12} mt={2} mb={2}>
           <MiddleBanner/>
         </Grid>
       </Grid>
