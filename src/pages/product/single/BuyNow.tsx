@@ -10,7 +10,7 @@ export default function BuyNow() {
     const {singleProductPage}  = themes
 
     const goToCheckout = () => {
-        navigate('/checkout/women-dress')
+        navigate('/checkout')
     }
 
     return (

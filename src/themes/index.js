@@ -230,6 +230,69 @@ CustomTheme = createTheme({
         orderSummryContainerGridSeCondcontainerGrid:{
             textAlign:"right"
         }
+    },
+    mainLayOut:{
+        marginTop:"60px",
+        marginBottom:"60px"
+    },
+    cursorPointer:{
+        cursor:"Pointer"
+    },
+    profile:{
+        dashboard:{
+            paperGridContainer:{
+                padding:"40px"
+            }
+        },
+    },
+    trackOrder:{
+        paperGridContainer:{
+            padding:"40px"
+        },
+        gridSecondContainer:{
+            justifyContent:"center",
+            textAlign:"center"
+        },
+        paperGridContainerGrid:{
+            borderBottom:"1px solid #f0f0f0"
+        },
+        gridSecondContainerGrid:{
+            marginTop:"20px"
+        },
+        trackOrderBtn:{
+            padding:"10px",
+            textTransform:"capitalize"
+        }
+    },
+    defaultBgColor:{
+        backgroundColor:"#fc2779"
+    },
+    paperGridContainerPadding:{
+        padding:"40px"
+    },
+    loginPage:{
+        gridContinerSecond:{
+            padding:"10px",
+            textAlign:"center"
+        },
+        gridContinerSecondGridFirst:{
+            paddingBottom:"10px",
+            borderBottom:"1px solid #f0f0f0"
+        },
+        loginSignup:{
+            textAlign:"left",
+            color:"#fc2779"
+        },
+        label:{
+            textAlign:"left",
+        },
+        authText:{
+            padding:'14px',
+        },
+        loginSignupBtn:{
+            textTransform: 'capitalize',
+            padding:'10px',
+        }
     }
 });
 

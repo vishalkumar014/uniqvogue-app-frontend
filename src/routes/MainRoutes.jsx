@@ -1,11 +1,12 @@
 import { lazy } from 'react';
 import MainLayout from '../layout/mainlayout';
 import Loadable from '../component/Loadable';
+import GuestGuard from '../guard/GuestGuard';
 
 const Home = Loadable(lazy(() => import('../pages/home')));
 const SingleProductPage = Loadable(lazy(() => import('../pages/product/single/SingleProductPage')));
 const CategoryPage = Loadable(lazy(() => import('../pages/category/Category')));
-const CheckoutPage = Loadable(lazy(() => import('../pages/checkout/Checkout')));
+const AuthPage = Loadable(lazy(() => import('../pages/auth/Login')));
 
 const NotFound =()=>{
   return(
@@ -15,7 +16,9 @@ const NotFound =()=>{
 const MainRoutes = {
   path: '/',
   element: (
-    <MainLayout/>
+    <GuestGuard>
+      <MainLayout/>
+    </GuestGuard>
   ),
   children: [
     {
@@ -31,8 +34,8 @@ const MainRoutes = {
       element: <SingleProductPage/>
     },
     {
-      path: 'checkout/:slug',
-      element: <CheckoutPage/>
+      path: 'login/',
+      element: <AuthPage/>
     },
     {
       path: '*',

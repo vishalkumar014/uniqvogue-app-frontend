@@ -7,7 +7,8 @@ import Logo from '../../../component/Logo';
 import Menu from '../../../component/menu/Menu';
 import SearchAppBar from '../../../component/SearchBar';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import { MdFavoriteBorder,MdOutlineShoppingBag } from 'react-icons/md';
+import {MdOutlineShoppingBag,MdDirectionsCar } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -31,8 +32,11 @@ ElevationScroll.propTypes = {
 
 export default function ElevateAppBar(props) {
   const themes    = useTheme();
-  const {header}  = themes
-
+  const {header,cursorPointer}  = themes
+  const navigate = useNavigate()
+  const navChangeHandler = (to) => {
+    navigate(to)
+  }
   return (
     <React.Fragment>
       <ElevationScroll {...props}>
@@ -55,15 +59,15 @@ export default function ElevateAppBar(props) {
                 </Grid>
                 <Grid sx={{display:{xs:"none",md:"block"}}}  size={{xs:3}}>
                   <Grid container alignItems={"center"} textAlign={"center"} justifyContent={"end"}>
-                    <Grid size={3}>
+                    <Grid  sx={cursorPointer} size={3} onClick={()=>{navChangeHandler('/account')}}>
                       <PermIdentityIcon/>
                       <Typography sx={header.icon}>Profile</Typography>
                     </Grid>
-                    <Grid size={3}>
-                      <MdFavoriteBorder  style={{fontSize: '24px' }} />
-                      <Typography sx={header.icon}>Wishlist</Typography>
+                    <Grid sx={cursorPointer} size={3} onClick={()=>{navChangeHandler('/account/order-track')}}>
+                      <MdDirectionsCar style={{fontSize: '24px' }} />
+                      <Typography sx={header.icon}>Track order</Typography>
                     </Grid>
-                    <Grid size={3}>
+                    <Grid sx={cursorPointer} size={3} onClick={()=>{navChangeHandler('/account/checkout')}}>
                       <MdOutlineShoppingBag style={{fontSize: '24px' }} />
                       <Typography sx={header.icon}>Bag</Typography>
                     </Grid>

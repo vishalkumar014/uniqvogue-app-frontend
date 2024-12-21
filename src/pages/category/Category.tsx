@@ -3,11 +3,13 @@ import {Box} from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import SideBar from './SideBar';
 import Products from '../product/Products';
-
+import { useTheme } from '@mui/material/styles';
 
 export default function Category() {
+    const themes:any    = useTheme();
+    const {mainLayOut}  = themes
     return (
-        <Grid container mt={"40px"} mb={"40px"}>
+        <Grid container sx={mainLayOut}>
             <Grid size={3}>
                 <SideBar/>
             </Grid>

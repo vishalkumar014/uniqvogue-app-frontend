@@ -11,7 +11,9 @@ body {
   color: rgb(255 255 255) !important;
   font-size: 18px !important;
 }
-.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
-.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+.MuiStepLabel-iconContainer svg {
   color: #fc2779 !important;
+}
+.MuiTabs-indicator{
+  background-color: #fc2779 !important;
 }
