@@ -3,10 +3,11 @@ import MainLayout from '../layout/mainlayout';
 import Loadable from '../component/Loadable';
 import GuestGuard from '../guard/GuestGuard';
 
-const Home = Loadable(lazy(() => import('../pages/home')));
+const Home              = Loadable(lazy(() => import('../pages/home')));
 const SingleProductPage = Loadable(lazy(() => import('../pages/product/single/SingleProductPage')));
-const CategoryPage = Loadable(lazy(() => import('../pages/category/Category')));
-const AuthPage = Loadable(lazy(() => import('../pages/auth/Login')));
+const CategoryPage      = Loadable(lazy(() => import('../pages/category/Category')));
+const AuthPage          = Loadable(lazy(() => import('../pages/auth/Login')));
+const AboutPage         = Loadable(lazy(() => import('../pages/about/AboutUs')));
 
 const NotFound =()=>{
   return(
@@ -36,6 +37,10 @@ const MainRoutes = {
     {
       path: 'login/',
       element: <AuthPage/>
+    },
+    {
+      path: '/about-us',
+      element:<AboutPage/>
     },
     {
       path: '*',

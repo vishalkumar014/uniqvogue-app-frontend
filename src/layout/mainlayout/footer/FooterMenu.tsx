@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
 import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 const footerMenu = [
     {
@@ -25,7 +26,7 @@ const footerMenu = [
             },
             {
                 id:4,
-                name:"UniqVoogue Stories",
+                name:"Stories",
                 to:"/stories"
             }
         ]
@@ -107,7 +108,12 @@ const footerMenu = [
 
 export default function FooterMenu() {
     const themes    = useTheme();
-    const {mainFooter}  = themes
+    const {mainFooter}:any  = themes
+    const navigate = useNavigate()
+    
+    const goToPageHandler  = (to) =>{
+        navigate(to)
+    }
 
     return (
         <Box padding={"0px 50px"}>
@@ -123,7 +129,11 @@ export default function FooterMenu() {
                                     {
                                         item.menus.map((menu,index)=>{
                                             return(
-                                                <Grid sx={mainFooter.footerTitle} key={index} size={12}>{menu.name}</Grid>
+                                                <Grid key={index} size={12}>
+                                                    <Typography onClick={()=>{goToPageHandler(menu.to)}} sx={mainFooter.footerTitle} >
+                                                        {menu.name}
+                                                    </Typography>
+                                                </Grid>
                                             )
                                         })
                                     }

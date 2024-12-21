@@ -90,7 +90,11 @@ CustomTheme = createTheme({
             fontSize: '14px',
             fontWeight: '400',
             color:'#fff',
-            p:"1px 0px"
+            p:"1px 0px",
+            '&:hover':{
+                textDecoration:"underline"
+            },
+            cursor:"pointer"
         },
         footerSocial:{
             borderTop:"2px solid #fff",
