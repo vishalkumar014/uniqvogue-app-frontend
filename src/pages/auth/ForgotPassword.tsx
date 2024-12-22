@@ -15,17 +15,16 @@ const CustomeTextField = styled(TextField)(({}) => ({
     },
 }));
 
-export default function Login() {
+export default function ForgotPassword() {
     const themes:any    = useTheme();
     const  {login}:any         = useAuth()
     const {loginPage,defaultBgColor}  = themes
  
-    const userLoginHadler = () =>{
-        login()
+    const userForgetPasswordHandler = () =>{
+        
     }
 
     return (
-     
         <Grid container >
             <Grid size={12}>
                 <Grid container sx={loginPage.gridContinerSecond}>
@@ -38,17 +37,9 @@ export default function Login() {
                         </Box>
                     </Grid>
                     <Grid size={12} mt={2}>
-                        <Typography sx={loginPage.label}>Password</Typography>
-                    </Grid>
-                    <Grid size={12} mt={1}>
                         <Box>
-                            <CustomeTextField placeholder='Password' type='password' fullWidth variant="outlined" />
-                        </Box>
-                    </Grid>
-                    <Grid size={12} mt={2}>
-                        <Box>
-                            <Button onClick={()=>{userLoginHadler()}} sx={{...defaultBgColor,...loginPage.loginSignupBtn}} fullWidth variant="contained" disableElevation>
-                                Signin
+                            <Button onClick={()=>{userForgetPasswordHandler()}} sx={{...defaultBgColor,...loginPage.loginSignupBtn}} fullWidth variant="contained" disableElevation>
+                                Continue
                             </Button>
                         </Box>
                     </Grid>

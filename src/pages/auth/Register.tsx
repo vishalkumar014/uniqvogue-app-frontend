@@ -15,17 +15,16 @@ const CustomeTextField = styled(TextField)(({}) => ({
     },
 }));
 
-export default function Login() {
+export default function Register() {
     const themes:any    = useTheme();
     const  {login}:any         = useAuth()
     const {loginPage,defaultBgColor}  = themes
  
-    const userLoginHadler = () =>{
-        login()
+    const userSignupHandler = () =>{
+        
     }
 
     return (
-     
         <Grid container >
             <Grid size={12}>
                 <Grid container sx={loginPage.gridContinerSecond}>
@@ -38,17 +37,17 @@ export default function Login() {
                         </Box>
                     </Grid>
                     <Grid size={12} mt={2}>
-                        <Typography sx={loginPage.label}>Password</Typography>
+                        <Typography  sx={loginPage.label}>Password</Typography>
                     </Grid>
                     <Grid size={12} mt={1}>
                         <Box>
-                            <CustomeTextField placeholder='Password' type='password' fullWidth variant="outlined" />
+                            <CustomeTextField  placeholder='Password' type='password' fullWidth variant="outlined" />
                         </Box>
                     </Grid>
                     <Grid size={12} mt={2}>
                         <Box>
-                            <Button onClick={()=>{userLoginHadler()}} sx={{...defaultBgColor,...loginPage.loginSignupBtn}} fullWidth variant="contained" disableElevation>
-                                Signin
+                            <Button onClick={()=>{userSignupHandler()}} sx={{...defaultBgColor,...loginPage.loginSignupBtn}} fullWidth variant="contained" disableElevation>
+                                Signup
                             </Button>
                         </Box>
                     </Grid>

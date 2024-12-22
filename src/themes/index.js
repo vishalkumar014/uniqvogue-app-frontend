@@ -296,6 +296,9 @@ CustomTheme = createTheme({
         loginSignupBtn:{
             textTransform: 'capitalize',
             padding:'10px',
+        },
+        paperGridContainerGrid:{
+            borderBottom:"1px solid #f0f0f0"
         }
     }
 });

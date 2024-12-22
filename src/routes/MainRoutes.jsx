@@ -6,7 +6,7 @@ import GuestGuard from '../guard/GuestGuard';
 const Home              = Loadable(lazy(() => import('../pages/home')));
 const SingleProductPage = Loadable(lazy(() => import('../pages/product/single/SingleProductPage')));
 const CategoryPage      = Loadable(lazy(() => import('../pages/category/Category')));
-const AuthPage          = Loadable(lazy(() => import('../pages/auth/Login')));
+const AuthPage          = Loadable(lazy(() => import('../pages/auth/Main')));
 const AboutPage         = Loadable(lazy(() => import('../pages/about/AboutUs')));
 
 const NotFound =()=>{
